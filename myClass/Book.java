@@ -41,14 +41,13 @@ public class Book extends DB_Element
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * 출력예시에 알맞게 출력할 수 맀도록 toString 메소드를 오버라이딩함
      *
-     * @return    x 와 y의 합
+     * @return    출력요구에 알맞은 반환 값 : (둥록번호) 제목, 저자, 출판사, 년도출판
      */
     public String toString()
     {
-        
-        return "";
+        return "("+bookID+") "+ title+", "+author+", "+publisher+
+            ", "+year;
     }
-
 }
