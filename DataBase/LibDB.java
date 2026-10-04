@@ -16,7 +16,7 @@ public class LibDB<T>
      */
     public LibDB()
     {
-        this.db = new ArrayList<>();
+        this.db = new ArrayList<T>();
     }
 
     /**
@@ -34,12 +34,12 @@ public class LibDB<T>
      *
      * @param  검색하려는 객체의 식별번호(예: 학번 --> 이용자, 책의 등록번호 --> 책)
      * @return 식별번호를 가진 객체 
-     *         없을 경우에는 없음을 표시
      */
     public T findElement(String ID)
     {
         return null;
     }
+
     /**
      * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
      *
