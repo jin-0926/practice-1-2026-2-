@@ -1,13 +1,13 @@
 package DataBase;
 import java.util.*;
-
+import myClass.DB_Element;
 /**
- * LIbDB 클래스의 설명을 작성하세요.
+ * LIbDB 책DB와 이용자DB에 공통으로 사용되는 Generic 클래스
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author (2025320018 진시원)
+ * @version (2026.10.05)
  */
-public class LibDB<T>
+public class LibDB<T extends DB_Element>
 {
     private ArrayList<T> db;
 
@@ -20,32 +20,47 @@ public class LibDB<T>
     }
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
+     *  db에 객체를 추가하는 메소드
      *
-     * @param  y  메소드의 샘플 파라미터
+     * @param  db에 추가할 객체
      */
     public void addElement(T element)
     {
-
+        this.db.add(element);
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * ID를 입력 받아서 입력받은 ID를 가진 객체가 있는지 확인하는 메소드 
      *
      * @param  검색하려는 객체의 식별번호(예: 학번 --> 이용자, 책의 등록번호 --> 책)
      * @return 식별번호를 가진 객체 
      */
     public T findElement(String ID)
     {
+        Iterator<T> it = db.iterator();
+
+        while(it.hasNext()){
+            T element = it.next();  
+
+            if(element.getID().equals(ID)){
+                return element;
+            }
+        }
+
         return null;
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * db에 저장된 모든 객체를 출력하는 메소드
      *
      */
     public void printAllElement()
     {
+        Iterator<T> it = db.iterator();
 
+        while(it.hasNext()){
+            T element = it.next();
+            System.out.println(element);
+        }
     }
 }

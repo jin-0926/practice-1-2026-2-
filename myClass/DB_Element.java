@@ -1,6 +1,5 @@
 package myClass;
 
-
 /**
  * DB_Element 객체의 고유한 식별 번호를 반환하는 추상메소드를 가진 클래스
  *
