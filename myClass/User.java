@@ -31,9 +31,9 @@ public class User extends DB_Element
     }
 
     /**
-     * 출력예시에 알맞게 출력할 수 맀도록 toString 메소드를 오버라이딩함
+     * 출력예시에 알맞게 출력할 수 있도록 toString 메소드를 오버라이딩함
      *
-     * @return    출력요구에 알맞은 반환 값 : [학번] 이름
+     * @return 출력요구에 알맞은 반환 값 : [학번] 이름
      */
     public String toString()
     {

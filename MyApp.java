@@ -12,10 +12,11 @@ import DataBase.LibDB;
 public class MyApp
 {
     /**
-     * 도서관 대출 처리 프로그램을 실행하는 main 메소드
-     * 
-     * 
-     */
+    * 도서관 대출 처리 프로그램을 실행하는 main 메소드
+    * 
+    * 이용자와 책을 생성하여 각 DB에 등록하고, 대출작업을 수행한 뒤 이용자 목록, 
+    * 책 목록, 대출 현황을 출력한다.
+    */
     public static void main(String[] args){
         LibDB<User> userDB = new LibDB<User>();
         LibDB<Book> bookDB = new LibDB<Book>();
@@ -62,7 +63,7 @@ public class MyApp
      */
     public static <T extends DB_Element> void printDB(LibDB<T> db)
     {
-        db.printAllElement();
+        db.printAllElements();
         System.out.println();
     }
     
