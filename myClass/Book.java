@@ -22,7 +22,7 @@ public class Book extends DB_Element
      * @param 작가(문자열), 책의 등록번호(문자열), 출판사(문자열), 
      *        제목(문자열), 출시년도(정수)
      */
-    public Book(String author,String bookID, String publisher, String title, 
+    public Book(String bookID, String title, String author, String publisher, 
         int year)
     {
         this.author = author;
@@ -43,9 +43,9 @@ public class Book extends DB_Element
     }
 
     /**
-     * 출력예시에 알맞게 출력할 수 맀도록 toString 메소드를 오버라이딩함
+     * 출력예시에 알맞게 출력할 수 있도록 toString 메소드를 오버라이딩함
      *
-     * @return    출력요구에 알맞은 반환 값 : (둥록번호) 제목, 저자, 출판사, 년도출판
+     * @return    출력요구에 알맞은 반환 값 : (등록번호) 제목, 저자, 출판사, 출시년도
      */
     public String toString()
     {
