@@ -3,7 +3,8 @@ import myClass.*;
 import DataBase.LibDB;
 
 /**
- * MyApp 클래스의 설명을 작성하세요.
+ * MyApp Generic 기반의 DB 클래스와 HashMap을 활용하여 도서관의 이용자, 
+ *       도서 목록, 대출 현황을 관리하고 출력을 실행하는 메인 클래스이다.
  *
  * @author (2025320018 진시원, 2025320037 윤승환)
  * @version (2026.10.06)
@@ -32,9 +33,12 @@ public class MyApp
         printDB(userDB);
         
         Book book1 = new Book("B01", "Java Programming", "홍길동", "ABC", 2000);
-        Book book2 = new Book("B02", "Software Analysis and Design", "profsHwang", "SMU", 2023);
-        Book book3 = new Book("B03", "명품 자바프로그래밍", "황기태", "생능출판", 2025);
-        Book book4 = new Book("B04", "소프트웨어테스트", "profsHwang", "SMU", 2024);
+        Book book2 = new Book("B02", "Software Analysis and Design",
+            "profsHwang", "SMU", 2023);
+        Book book3 = new Book("B03", "명품 자바프로그래밍", "황기태", 
+            "생능출판", 2025);
+        Book book4 = new Book("B04", "소프트웨어테스트", "profsHwang", 
+            "SMU", 2024);
         
         bookDB.addElement(book1);
         bookDB.addElement(book2);
@@ -79,5 +83,6 @@ public class MyApp
         }
         
         System.out.println("--------------------");
+        System.out.println();
     }
 }
