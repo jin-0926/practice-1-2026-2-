@@ -51,7 +51,7 @@ public class LibDB<T extends DB_Element>
     }
 
     /**
-     * db에 저장된 모든 객체를 출력하는 메소드(for each)
+     * db에 저장된 모든 객체를 출력하는 메소드
      *
      */
     public void printAllElement()
