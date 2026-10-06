@@ -2,7 +2,7 @@ package DataBase;
 import java.util.*;
 import myClass.DB_Element;
 /**
- * LIbDB 책DB와 이용자DB에 공통으로 사용되는 Generic 클래스
+ * LibDB 책DB와 이용자DB에 공통으로 사용되는 Generic 클래스
  *
  * @author (2025320018 진시원)
  * @version (2026.10.05)
@@ -12,7 +12,7 @@ public class LibDB<T extends DB_Element>
     private ArrayList<T> db;
 
     /**
-     * LIbDB 클래스의 객체 생성자
+     * LibDB 클래스의 객체 생성자
      */
     public LibDB()
     {
